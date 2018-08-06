@@ -78,9 +78,9 @@
             self.BuddleRadius = 17.5;
         }
         
-        if (!_BuddleDistance) {
-            _BuddleDistance = 70;
-        }
+//        if (!_BuddleDistance) {
+            _BuddleDistance = W(60);
+//        }
         
         [self addRoundLayer];
     }
@@ -108,7 +108,7 @@
     _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     _btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    _btnArr = [NSMutableArray arrayWithObjects:_btn1, _btn2, _btn3, nil];
+    _btnArr = [NSMutableArray arrayWithObjects:_btn1, _btn2, nil];
     
     
     [self settingBut];
@@ -151,8 +151,8 @@
                 
                 [obj.titleLabel setFont:[UIFont boldSystemFontOfSize:14]];
                 
-                CGFloat x = self.center.x-sinf(M_PI/5*(idx+1))*_BuddleDistance;
-                CGFloat y = self.center.y-cosf(M_PI/5*(idx+1))*_BuddleDistance;
+                CGFloat x = self.center.x-sinf(M_PI/3*(idx+1))*_BuddleDistance;
+                CGFloat y = self.center.y-cosf(M_PI/3*(idx+1))*_BuddleDistance;
                 
                 
 //                CGFloat x = self.center.x-cosf(M_PI/5*(idx+1))*_BuddleDistance;

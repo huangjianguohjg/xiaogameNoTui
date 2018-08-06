@@ -72,7 +72,7 @@
     CGPoint point = CGPointMake(WIDTH- W(40), kMarginTopHeight + H(60));
     
     AceGooeyMenu *vi = [[AceGooeyMenu alloc] initWithArcWithCenter:point radius:35 BubbleColor:[UIColor blueColor]];
-    vi.BuddleStrArr = @[@"头像", @"关于", @"等级"];
+    vi.BuddleStrArr = @[@"头像", @"等级"];
     vi.delegate = self;
     
     [self.view addSubview:vi];
@@ -98,12 +98,24 @@
             self.gameView.xianIcon.image = value;
         };
         [self.navigationController pushViewController:icVC animated:YES];
-    }else if (btnNum ==1){
-        HJGAboutController *vc = [[HJGAboutController alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
     }else if (btnNum ==2){
-        HJGLevelController *vc = [[HJGLevelController alloc]init];
-        [self.navigationController pushViewController:vc animated:YES];
+//        HJGAboutController *vc = [[HJGAboutController alloc]init];
+//        [self.navigationController pushViewController:vc animated:YES];
+    }else if (btnNum ==1){
+//        HJGLevelController *vc = [[HJGLevelController alloc]init];
+//        [self.navigationController pushViewController:vc animated:YES];
+        
+        
+        if (self.xianTotal > 50000) {
+            [SVProgressHUD setMinimumDismissTimeInterval:3.f];
+            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为皇帝！！！再接再厉哦"];
+        }else if (self.xianTotal >10000&&self.xianTotal < 50001){
+            [SVProgressHUD setMinimumDismissTimeInterval:2.f];
+            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为伯爵！！！再接再厉哦"];
+        }else if (self.xianTotal < 10001){
+            [SVProgressHUD setMinimumDismissTimeInterval:2.f];
+            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为平民！！！再接再厉哦"];
+        }
     }
     
     

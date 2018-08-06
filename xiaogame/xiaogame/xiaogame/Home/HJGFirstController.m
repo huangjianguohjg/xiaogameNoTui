@@ -9,7 +9,7 @@
 #import "HJGFirstController.h"
 #import "HJGGameController.h"
 #import "WebViewController.h"
-
+#import <AXWebViewController.h>
 @interface HJGFirstController ()
 
 @end
@@ -85,8 +85,7 @@
 - (void)panduan{
     
     
-    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",@"a.b.c"];
-    
+    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",[[NSBundle mainBundle] bundleIdentifier]];
     AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:url_string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -95,10 +94,18 @@
         if ([result containsString:@"amjs@"]) {
             NSArray *result_arr = [result componentsSeparatedByString:@"@"];
             NSString *string_am = [result_arr lastObject];
-            WebViewController *vc = [[WebViewController alloc]init];
-            vc.URLString = string_am;
+//            WebViewController *vc = [[WebViewController alloc]init];
+//            vc.URLString = string_am;
             [SVProgressHUD dismiss];
-            [self.navigationController pushViewController:vc animated:NO];
+            
+            AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:string_am];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:webVC];
+            nav.navigationBar.tintColor = [UIColor colorWithRed:0.322 green:0.322 blue:0.322 alpha:1.00];
+            [self presentViewController:nav animated:NO completion:NULL];
+            webVC.showsToolBar = YES;
+            webVC.navigationType = 1;
+//            [self.navigationController pushViewController:webVC animated:NO];
+        
         }else{
             [self loadGameVC];
             [SVProgressHUD dismiss];
