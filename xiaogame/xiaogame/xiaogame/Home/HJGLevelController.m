@@ -26,7 +26,7 @@
 #pragma mark - configNav
 - (void)configNav{
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.title = @"用户等级";
+//    self.title = @"用户等级";
     
 }
 

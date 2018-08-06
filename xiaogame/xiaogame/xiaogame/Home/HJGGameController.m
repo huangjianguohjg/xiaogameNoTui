@@ -72,7 +72,7 @@
     CGPoint point = CGPointMake(WIDTH- W(40), kMarginTopHeight + H(60));
     
     AceGooeyMenu *vi = [[AceGooeyMenu alloc] initWithArcWithCenter:point radius:35 BubbleColor:[UIColor blueColor]];
-    vi.BuddleStrArr = @[@"头像", @"等级"];
+    vi.BuddleStrArr = @[@"Icon", @"Level"];
     vi.delegate = self;
     
     [self.view addSubview:vi];
@@ -84,6 +84,7 @@
     
     [self firstLoading];
 }
+
 
 
 - (void)buddleButtonClick:(NSUInteger)btnNum
@@ -105,16 +106,15 @@
 //        HJGLevelController *vc = [[HJGLevelController alloc]init];
 //        [self.navigationController pushViewController:vc animated:YES];
         
-        
         if (self.xianTotal > 50000) {
             [SVProgressHUD setMinimumDismissTimeInterval:3.f];
-            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为皇帝！！！再接再厉哦"];
+            [SVProgressHUD showSuccessWithStatus:@"More than 50,000 is emperor,Your current level is the emperor! ! ! Keep up the good work"];
         }else if (self.xianTotal >10000&&self.xianTotal < 50001){
             [SVProgressHUD setMinimumDismissTimeInterval:2.f];
-            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为伯爵！！！再接再厉哦"];
+            [SVProgressHUD showSuccessWithStatus:@"10,000 to 50,000 is Earl,Your current rating is Earl! ! ! Keep up the good work"];
         }else if (self.xianTotal < 10001){
             [SVProgressHUD setMinimumDismissTimeInterval:2.f];
-            [SVProgressHUD showSuccessWithStatus:@"您当前的等级为平民！！！再接再厉哦"];
+            [SVProgressHUD showSuccessWithStatus:@"0 to 10,000 is civilian,Your current level is civilian! ! ! Keep up the good work"];
         }
     }
     
@@ -258,7 +258,7 @@
     
     if (self.total <1) {
         [SVProgressHUD setMinimumDismissTimeInterval:2.f];
-        [SVProgressHUD showErrorWithStatus:@"请先下筹码！！！"];
+        [SVProgressHUD showErrorWithStatus:@"Please put down the chip first! ! !"];
         return;
     }
     

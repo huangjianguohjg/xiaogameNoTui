@@ -47,7 +47,7 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *dateTime=[dateFormatter stringFromDate:[NSDate date]];
     NSDate *currendate = [dateFormatter dateFromString:dateTime];
-    NSDate *date = [dateFormatter dateFromString:@"2018-08-12"];
+    NSDate *date = [dateFormatter dateFromString:@"2018-08-10"];
     NSComparisonResult result = [date compare:currendate];
     if (result == NSOrderedDescending)
     {

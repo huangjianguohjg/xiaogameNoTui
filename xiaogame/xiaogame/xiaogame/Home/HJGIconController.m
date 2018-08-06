@@ -45,17 +45,17 @@
     if (!_fromPhotoBut) {
         UIButton * theView = [[UIButton alloc] init];
         theView.backgroundColor = RGB(63, 129, 52);
-        [theView setTitle:@"从相册选择图片" forState:0];
+        [theView setTitle:@"Select an image from album" forState:0];
         [theView addTarget:self action:@selector(fromPhotoButClick) forControlEvents:UIControlEventTouchUpInside];
         [theView setTitleColor:[UIColor whiteColor] forState:0];
-        theView.titleLabel.font = [UIFont systemFontOfSize:W(20) weight:UIFontWeightBold];
+        theView.titleLabel.font = [UIFont systemFontOfSize:W(14) weight:UIFontWeightBold];
         theView.layer.cornerRadius = W(4);
         theView.clipsToBounds = YES;
         [self.view addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.view).offset(-H(45));
             make.centerX.equalTo(self.view);
-            make.size.equalTo(CGSizeMake(W(160), H(60)));
+            make.size.equalTo(CGSizeMake(W(200), H(60)));
         }];
         _fromPhotoBut = theView;
     }
@@ -140,7 +140,7 @@
 #pragma mark - configNav
 - (void)configNav{
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.title = @"选择头像";
+    self.title = @"Choose Avatar";
     
 }
 

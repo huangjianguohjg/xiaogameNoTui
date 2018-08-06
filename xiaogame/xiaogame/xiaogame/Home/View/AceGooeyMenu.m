@@ -74,9 +74,9 @@
         
             _BubbleColor = RGB(0, 0, 0);
         
-        if (!_BuddleRadius) {
-            self.BuddleRadius = 17.5;
-        }
+//        if (!_BuddleRadius) {
+            self.BuddleRadius = W(28);
+//        }
         
 //        if (!_BuddleDistance) {
             _BuddleDistance = W(60);
