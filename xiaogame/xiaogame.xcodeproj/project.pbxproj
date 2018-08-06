@@ -191,6 +191,8 @@
 		D776610F2115688700235BE7 /* zhuozi.png in Resources */ = {isa = PBXBuildFile; fileRef = D776610E2115688700235BE7 /* zhuozi.png */; };
 		D776611121156C1900235BE7 /* zhuangIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D776611021156C1900235BE7 /* zhuangIcon.png */; };
 		D77661132115759A00235BE7 /* Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D77661122115759A00235BE7 /* Normal.png */; };
+		D7B97DE22118430C00721B99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7B97DE02118430C00721B99 /* InfoPlist.strings */; };
+		D7B97DE6211843BE00721B99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7B97DE4211843BE00721B99 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +494,8 @@
 		D776610E2115688700235BE7 /* zhuozi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuozi.png; sourceTree = "<group>"; };
 		D776611021156C1900235BE7 /* zhuangIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhuangIcon.png; sourceTree = "<group>"; };
 		D77661122115759A00235BE7 /* Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Normal.png; sourceTree = "<group>"; };
+		D7B97DE12118430C00721B99 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
+		D7B97DE5211843BE00721B99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,6 +573,7 @@
 				D7765F3321154BA000235BE7 /* Assets.xcassets */,
 				D7765F3821154BA000235BE7 /* Info.plist */,
 				D7765F3921154BA000235BE7 /* main.m */,
+				D7B97DDF2118430C00721B99 /* zh-Hans.lproj */,
 			);
 			path = xiaogame;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 		D7765F5C21154BEE00235BE7 /* xiaogame */ = {
 			isa = PBXGroup;
 			children = (
+				D7B97DE3211843BE00721B99 /* en.lproj */,
 				D7765F6221154C8400235BE7 /* Main */,
 				D7765F5D21154BEE00235BE7 /* Catercory */,
 				D7765F5E21154BEE00235BE7 /* Home */,
@@ -951,6 +957,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D7B97DDF2118430C00721B99 /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D7B97DE02118430C00721B99 /* InfoPlist.strings */,
+			);
+			path = "zh-Hans.lproj";
+			sourceTree = "<group>";
+		};
+		D7B97DE3211843BE00721B99 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				D7B97DE4211843BE00721B99 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = xiaogame/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1050,6 +1073,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D7765F1E21154BA000235BE7;
 			productRefGroup = D7765F2821154BA000235BE7 /* Products */;
@@ -1069,6 +1093,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77660DE2115670400235BE7 /* 1_2.png in Resources */,
+				D7B97DE6211843BE00721B99 /* InfoPlist.strings in Resources */,
 				D77660CC2115670400235BE7 /* Back.png in Resources */,
 				D77660DD2115670400235BE7 /* 1_7.png in Resources */,
 				D77660FF2115670400235BE7 /* 2_8.png in Resources */,
@@ -1091,6 +1116,7 @@
 				D77660DA2115670400235BE7 /* 1_3.png in Resources */,
 				D77660E62115670400235BE7 /* 0_5.png in Resources */,
 				D77660FB2115670400235BE7 /* 0_7.png in Resources */,
+				D7B97DE22118430C00721B99 /* InfoPlist.strings in Resources */,
 				D77660BB2115670400235BE7 /* 10.png in Resources */,
 				D77661042115670400235BE7 /* 15.png in Resources */,
 				D77660F42115670400235BE7 /* 1_K.png in Resources */,
@@ -1367,6 +1393,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D7B97DE02118430C00721B99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7B97DE12118430C00721B99 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D7B97DE4211843BE00721B99 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7B97DE5211843BE00721B99 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D7765F5121154BA000235BE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1482,7 +1527,7 @@
 				DEVELOPMENT_TEAM = 3K9F87DL75;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = xiaogame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaogame.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1500,7 +1545,7 @@
 				DEVELOPMENT_TEAM = 3K9F87DL75;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = xiaogame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaogame.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
